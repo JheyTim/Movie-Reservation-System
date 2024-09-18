@@ -1,6 +1,7 @@
 const express = require('express');
 const sequelize = require('./models');
 const authRoutes = require('./routes/authRoutes');
+const movieRoutes = require('./routes/movieRoutes');
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
@@ -11,6 +12,7 @@ app.use(express.json());
 
 // Routes
 app.use('/auth', authRoutes);
+app.use('/movies', movieRoutes);
 
 // Start the server
 app.listen(PORT, async () => {
@@ -18,7 +20,7 @@ app.listen(PORT, async () => {
 
   try {
     await sequelize.authenticate();
-    // await sequelize.sync({ force: true });
+    await sequelize.sync();
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
