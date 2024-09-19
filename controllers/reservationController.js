@@ -1,5 +1,6 @@
 const Reservation = require('../models/reservation');
 const Showtime = require('../models/showtime');
+const User = require('../models/user');
 
 // Create a reservation (Regular User)
 const createReservation = async (req, res) => {
@@ -61,8 +62,12 @@ const getShowtimeReservations = async (req, res) => {
   try {
     const reservations = await Reservation.findAll({
       where: { showtimeId },
-      include: ['User'],
+      include: [
+        { model: User, attributes: ['id', 'name', 'email'] },
+        { model: Showtime, attributes: ['id', 'capacity', 'date', 'time'] },
+      ],
     });
+
     const totalSeatsReserved = await Reservation.sum('seats', {
       where: { showtimeId },
     });

@@ -21,6 +21,7 @@ const createShowtime = async (req, res) => {
 
     res.status(201).json(showtime);
   } catch (error) {
+    console.log(error)
     res.status(500).json({ message: 'Error creating showtime', error });
   }
 };
@@ -33,6 +34,7 @@ const getShowtimes = async (req, res) => {
     const showtimes = await Showtime.findAll({ where: { movieId } });
     res.status(200).json(showtimes);
   } catch (error) {
+    console.log(error)
     res.status(500).json({ message: 'Error fetching showtimes', error });
   }
 };
