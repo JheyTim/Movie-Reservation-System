@@ -114,7 +114,7 @@ This is the backend system for a movie reservation service, which allows users t
 * GET /reservations/showtime/:showtimeId: Fetch all reservations for a specific showtime (Admin only).
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
 
 
