@@ -1,9 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const sequelize = require('./models');
 const authRoutes = require('./routes/authRoutes');
 const movieRoutes = require('./routes/movieRoutes');
 const reservationRoutes = require('./routes/reservationRoutes');
-require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
 
