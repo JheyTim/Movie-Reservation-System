@@ -1,13 +1,13 @@
 {
   "name": "movie-reservation-system",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Timothy Jhey Sarmiento",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "bcryptjs": "^2.4.3",
