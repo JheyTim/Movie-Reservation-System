@@ -1,6 +1,8 @@
-# 🎥 Movie Reservation Backend API
+# Movie Reservation Backend API
 
 This is the backend system for a movie reservation service, which allows users to sign up, log in, browse movies, reserve seats for specific showtimes, and manage their reservations. The system also includes user authentication, movie and showtime management, seat reservation functionality, and reporting features.
+
+Special thanks to the [Movie Reservation System](https://roadmap.sh/projects/movie-reservation-system) project on Roadmap.sh for inspiration.
 
 ## Features
 
@@ -115,7 +117,3 @@ This is the backend system for a movie reservation service, which allows users t
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
-
-
-
-Special thanks to the [Movie Reservation System](https://roadmap.sh/projects/movie-reservation-system) project on Roadmap.sh for inspiration.
